@@ -1,17 +1,11 @@
-playAgain = () => {
-    let human_wants_again = confirm("Play again?");
-    if (human_wants_again == true) {
-        playGame();
-    } else {
-        alert('Thanks for playing.');
-    }
-}
+resetGame = () => {
 
-playGame = () => {
-    let computer_score = 0;
-    let human_score = 0;
+    const buttons = document.querySelectorAll('#buttonsContainer img');
+    buttons.forEach(button => button.addEventListener('click', function () {
+        playRound(this.getAttribute("value"));
+    }));
 
-    playRound = () => {
+    playRound = (clicked_button_value) => {
 
         getRandomInt = (max) => {
             return Math.floor(Math.random() * max + 1);
@@ -34,28 +28,14 @@ playGame = () => {
             return computer_roll;
         }
 
-        promptUser = () => {
-            let human_input = prompt('Rock, Paper, or Scissors?');
-            let human_iput_sanitized = human_input.toLowerCase();
-            return human_iput_sanitized;
-        }
-
         getHumanChoice = () => {
-            let human_roll = promptUser();
-            while (human_roll != 'rock' && human_roll != 'scissors' && human_roll != 'paper') {
-                console.log('invalid input');
-                human_roll = promptUser();
-            }
-            if (human_roll == 'rock' || human_roll == 'scissors' || human_roll == 'paper') {
-                let human_roll_result = human_roll;
-                return human_roll_result;
-            }
+            let human_roll = clicked_button_value;
+            return human_roll;
         }
 
         compareRolls = (computer_result, human_result) => {
             console.log('Computer rolls ' + computer_result);
             console.log('Human rolls ' + human_result);
-            let result;
             if (computer_result == 'rock' && human_result == 'rock') {
                 console.log('Tie!');
             }
@@ -66,25 +46,22 @@ playGame = () => {
                 console.log('Tie!');
             }
             else if (computer_result == 'rock' && human_result == 'paper') {
-                human_score++;
+                console.log('Human wins!');
             }
             else if (computer_result == 'rock' && human_result == 'scissors') {
-                computer_score++;
+               console.log('Computer wins!');
             }
             else if (computer_result == 'paper' && human_result == 'rock') {
-                computer_score++;
+                console.log('Computer wins!');
             }
             else if (computer_result == 'scissors' && human_result == 'rock') {
-                human_score++;
+                console.log('Human wins!');
             }
             else if (computer_result == 'scissors' && human_result == 'paper') {
-                human_score++;
+                console.log('Human wins!');
             }
             else if (computer_result == 'paper' && human_result == 'scissors') {
-                human_score++;
-            }
-            else {
-                result = 'UNKNOWN RESULT';
+                console.log('Human wins!');
             }
         }
 
@@ -92,29 +69,6 @@ playGame = () => {
         let human_result = getHumanChoice();
         compareRolls(computer_result, human_result);
     }
-    // Game goes 5 rounds
-    for (round = 1; round < 6; round++) {
-        playRound();
-        if (human_score > computer_score) {
-            console.log("Human  wins Round " + round);
-        } else if (computer_score > human_score) {
-            console.log("Computer wins Round " + round);
-        }
-        console.log('Human Score: ' + human_score);
-        console.log('Computer Score: ' + computer_score);
-        if (round == 5) {
-            if (human_score > computer_score) {
-                console.log("Human  wins the game!");
-            }
-            else if (computer_score > human_score) {
-                console.log("Computer wins the game!");
-            }
-            else if (computer_score == human_score) {
-                console.log('Tie game!')
-            }
-        }
-    }
-    playAgain();
 }
 
-window.addEventListener('load', playGame); 
+window.addEventListener('load', resetGame); 

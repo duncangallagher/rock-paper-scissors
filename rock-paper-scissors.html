@@ -10,13 +10,35 @@
         body {
             background-color: #333333;
         }
+
+        #buttonsContainer {
+            text-align: center;
+            margin-top: 30vh;
+        }
+
+        #buttonsContainer img {
+            height: 100px;
+            width: auto;
+            margin: 2em;
+            transition: transform 0.25s linear;
+            transform: translate(0px, 2vh);
+        }
+
+        #buttonsContainer img:hover {
+            cursor: pointer;
+            transition: transform 0.3s linear;
+            transform: translate(0px, -2vh);
+        }
     </style>
+    <script src="rock-paper-scissors.js"></script>
 </head>
 
 <body>
+    <div id="buttonsContainer">
+        <img id="rockButton" value="rock" src="img/rock.svg">
+        <img id="paperButton" value="paper" src="img/paper.svg">
+        <img id="scissorsButton" value="scissors" src="img/scissors.svg">
+    </div>
 </body>
-
-<script src="rock-paper-scissors.js">
-</script>
 
 </html>

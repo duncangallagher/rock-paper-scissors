@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="675" height="800" version="1.1" viewBox="0 0 675 800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="icons">
+    <g id="ui-gambling-website-lined-icnos-casinoshunter">
+      <g id="_1" data-name="1">
+        <path id="paper" class="cls-1" d="M500,0v124.5c0,40.7,28.6,75.5,66.5,75.5h108.5s0,525,0,525c0,41.4-33.6,75-75,75H75c-41.4,0-75-33.6-75-75V75C0,33.6,33.6,0,75,0h425ZM558.5,12.5l99.6,87.6c10.8,9.5,17,23.2,17,37.5v12.4h-108.5c-7.9,0-16.5-10.4-16.5-25.5V6.5c3,1.7,5.9,3.7,8.5,6Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
