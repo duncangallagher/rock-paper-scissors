@@ -34,34 +34,35 @@ resetGame = () => {
         }
 
         compareRolls = (computer_result, human_result) => {
-            console.log('Computer rolls ' + computer_result);
-            console.log('Human rolls ' + human_result);
+            scoreDisplay = document.getElementById('scoreContainer');
+            scoreDisplay.innerHTML = ('<br>Computer rolls ' + computer_result);
+            scoreDisplay.innerHTML += ('<br>Human rolls ' + human_result);
             if (computer_result == 'rock' && human_result == 'rock') {
-                console.log('Tie!');
+                scoreDisplay.innerHTML += ('<br>Tie!');
             }
             else if (computer_result == 'paper' && human_result == 'paper') {
-                console.log('Tie!');
+                scoreDisplay.innerHTML += ('<br>Tie!');
             }
             else if (computer_result == 'scissors' && human_result == 'scissors') {
-                console.log('Tie!');
+                scoreDisplay.innerHTML += ('<br>Tie!');
             }
             else if (computer_result == 'rock' && human_result == 'paper') {
-                console.log('Human wins!');
+                scoreDisplay.innerHTML += ('<br>Human wins!');
             }
             else if (computer_result == 'rock' && human_result == 'scissors') {
-               console.log('Computer wins!');
+                scoreDisplay.innerHTML += ('<br>Computer wins!');
             }
             else if (computer_result == 'paper' && human_result == 'rock') {
-                console.log('Computer wins!');
+                scoreDisplay.innerHTML += ('<br>Computer wins!');
             }
             else if (computer_result == 'scissors' && human_result == 'rock') {
-                console.log('Human wins!');
+                scoreDisplay.innerHTML += ('<br>Human wins!');
             }
             else if (computer_result == 'scissors' && human_result == 'paper') {
-                console.log('Human wins!');
+                scoreDisplay.innerHTML += ('<br>Human wins!');
             }
             else if (computer_result == 'paper' && human_result == 'scissors') {
-                console.log('Human wins!');
+                scoreDisplay.innerHTML += ('<br>Human wins!');
             }
         }
 

@@ -13,7 +13,6 @@
 
         #buttonsContainer {
             text-align: center;
-            margin-top: 30vh;
         }
 
         #buttonsContainer img {
@@ -29,15 +28,28 @@
             transition: transform 0.3s linear;
             transform: translate(0px, -2vh);
         }
+
+        #scoreContainer {
+            text-align: center;
+            font-size: 1em;
+            color: #FFFFFF;
+            font-family: sans-serif;
+            height: 100px;
+        }
     </style>
     <script src="rock-paper-scissors.js"></script>
 </head>
 
 <body>
-    <div id="buttonsContainer">
-        <img id="rockButton" value="rock" src="img/rock.svg">
-        <img id="paperButton" value="paper" src="img/paper.svg">
-        <img id="scissorsButton" value="scissors" src="img/scissors.svg">
+    <div style="display: flex; flex-direction: column;">
+        <p id="scoreContainer">
+            Rock, Paper, or Scissors?
+        </p>
+        <div id="buttonsContainer">
+            <img id="rockButton" value="rock" src="img/rock.svg">
+            <img id="paperButton" value="paper" src="img/paper.svg">
+            <img id="scissorsButton" value="scissors" src="img/scissors.svg">
+        </div>
     </div>
 </body>
 
